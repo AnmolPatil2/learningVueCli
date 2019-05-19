@@ -4,6 +4,7 @@
 
     <Navbar></Navbar>
     <Allfriends/>
+    <Onlinefriends/>
   </div>
 </template>
 

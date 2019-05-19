@@ -2,7 +2,7 @@
   <div id="allfriends">
     <h2>Allfriends</h2>
     <div v-for="(friend,index) in friends" :key="index">
-      <span v-if="friend.online">{{friend.name}}</span>
+      <p v-if="friend.online" @click="f1(friend.name)">{{friend.name}}</p>
     </div>
     <Onlinefriends :friends="friends"/>
   </div>
@@ -13,6 +13,12 @@ export default {
   props: ["friends"],
   data() {
     return {};
+  },
+  methods: {
+    f1(name) {
+      console.log("hii");
+      this.$emit("delete", { name });
+    }
   }
 };
 </script>

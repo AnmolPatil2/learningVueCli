@@ -4,7 +4,7 @@
     <div v-for="(friend,index) in friends" :key="index">
       <span>{{friend.name}}</span>
     </div>
-    <Onlinefriends :friends="friends"/>
+    <Onlinefriends :friends="friends" @delete="delete1"></Onlinefriends>
   </div>
 </template>
 <script>
@@ -36,6 +36,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    delete1() {
+      console.log("name");
+    }
   }
 };
 </script>
