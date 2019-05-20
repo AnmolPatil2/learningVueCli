@@ -3,8 +3,11 @@
     <img alt="Vue logo" src="../assets/logo.png">
 
     <Navbar></Navbar>
-
-    <Profile></Profile>
+    <ul>
+      <li v-for="(id,index) in ids " :key="index">
+        <router-link :to="{name:'Profile',params:{name:id}}">{{id}}</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -21,6 +24,11 @@ export default {
     Navbar,
     Blogs,
     Profile
+  },
+  data() {
+    return {
+      ids: ["1", "2", "3", "4"]
+    };
   }
 };
 </script>
