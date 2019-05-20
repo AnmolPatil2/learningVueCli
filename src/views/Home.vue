@@ -3,8 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
 
     <Navbar></Navbar>
-    <Allfriends/>
-    <Onlinefriends/>
+    <Blogs></Blogs>
   </div>
 </template>
 
@@ -12,15 +11,13 @@
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 import Navbar from "@/components/Navbar";
-import Allfriends from "@/components/Allfriends";
-import Onlinefriends from "@/components/Onlinefriends";
+import Blogs from "@/components/Blogs";
 export default {
   name: "home",
   components: {
     HelloWorld,
     Navbar,
-    Onlinefriends,
-    Allfriends
+    Blogs
   }
 };
 </script>
