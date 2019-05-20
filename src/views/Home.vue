@@ -3,7 +3,8 @@
     <img alt="Vue logo" src="../assets/logo.png">
 
     <Navbar></Navbar>
-    <Blogs></Blogs>
+
+    <Profile></Profile>
   </div>
 </template>
 
@@ -12,12 +13,14 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import Navbar from "@/components/Navbar";
 import Blogs from "@/components/Blogs";
+import Profile from "@/components/Profile";
 export default {
   name: "home",
   components: {
     HelloWorld,
     Navbar,
-    Blogs
+    Blogs,
+    Profile
   }
 };
 </script>
