@@ -8,6 +8,8 @@
         <router-link :to="{name:'Profile',params:{name:id}}">{{id}}</router-link>
       </li>
     </ul>
+    <button @click="GoHome">Go Home</button>
+    <button @click="goFront">Go Home</button>
   </div>
 </template>
 
@@ -29,6 +31,14 @@ export default {
     return {
       ids: ["1", "2", "3", "4"]
     };
+  },
+  methods: {
+    GoHome() {
+      this.$router.push({ name: "about" });
+    },
+    goFront() {
+      this.$router.go(-1);
+    }
   }
 };
 </script>
